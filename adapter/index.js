@@ -3,7 +3,7 @@ const { saveMessageJson } = require('./jsonDb')
 const { getDataIa } = require('./diaglogflow')
 const  stepsInitial = require('../flow/initial.json')
 const  stepsReponse = require('../flow/response.json')
-const { saveMessageMongo } = require('./mongoDb')
+const { saveMessageMongo, getDataMongo, getReplyMongo } = require('./mongoDb')
 
 const get = (message) => new Promise((resolve, reject) => {
     /**
@@ -16,15 +16,13 @@ const get = (message) => new Promise((resolve, reject) => {
         resolve(response)
     }
     /**
-     * Provisorio desde json
+     * Si usas mongoDb
      */
     
      if (process.env.DATABASE === 'mongoDb') {
-        const { key } = stepsInitial.find(k => k.keywords.includes(message)) || { key: null }
-        const response = key || null
-        resolve(response)
+       const resp = getDataMongo(message)
+       resolve(resp)
     }
-    
     
     
     
@@ -55,18 +53,21 @@ const reply = (step) => new Promise((resolve, reject) => {
         return 
     }
     /**
-    * Provisorio desde json
+    * Si usas MongoDb
     */
-    if (process.env.DATABASE === 'mongoDb') {
-        let resData = { replyMessage: '', media: null, trigger: null }
-        const responseFind = stepsReponse[step] || {};
-        resData = {
-            ...resData, 
-            ...responseFind,
-            replyMessage:responseFind.replyMessage.join('')}
-        resolve(resData);
-        return 
+
+     if (process.env.DATABASE === 'mongoDb') {
+        //let resData = { replyMessage: '', media: null, trigger: null, list: null }
+        
+        const resp = getReplyMongo(step);
+        resolve(resp)
+        
+       /*  getReply(step, (dt) => {
+            resData = { ...resData, ...dt }
+            resolve(resData)
+        }); */
     }
+    
     /**
      * Si usas MYSQL
      */

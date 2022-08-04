@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const MessageSchema = new mongoose.Schema(
   {
-    message: { type: String, required: true },
-    number: { type: String, required: true },
+    message: { type: String },
+    number: { type: String },
     trigger: { type: String },
   },
   { timestamps: true }
