@@ -2,7 +2,7 @@
 Actualizado Agosto 2022  
 <br>
 
-## Proyecto original de => [Liefer Mendez](https://www.youtube.com/c/LeiferMendez)  
+## Proyecto original de => [Leifer Mendez](https://www.youtube.com/c/LeiferMendez)  
 
 <br> 
   
