@@ -5,7 +5,7 @@ const sendMessagePost = (req, res) => {
     console.log('asdasdasdasdasd')
     const { message, number } = req.body
     const client = req.clientWs || null;
-    sendMessage(client, number, message)
+    sendMessage(client, number, message) 
     res.send({ status: 'Enviado!' })
 }
 

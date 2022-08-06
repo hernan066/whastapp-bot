@@ -8,6 +8,7 @@ const getDataMongo = async (message = "") => {
   const results = await Initial.find({ message });
   const [response] = results;
   const key = response?.option_key || null;
+  console.log('getDataMongo ================', key)
   return key;
 };
 
@@ -16,13 +17,14 @@ const getDataMongo = async (message = "") => {
 const getReplyMongo = async (option_key = "") => {
   const results = await Response.find({ option_key });
   const [response] = results;
-  const respuestaMensaje = response?.replyMessage || "";
+  //const respuestaMensaje = response?.replyMessage || "";
   const value = {
-    replyMessage: respuestaMensaje.join(""),
+    replyMessage: response?.replyMessage || "",
     trigger: response?.trigger || "",
     media: response?.media || "",
     list: response?.list || "",
   };
+  console.log('getDataMongo ================', value)
   return value;
 };
 
@@ -52,7 +54,7 @@ const saveMessageMongo = async (message, trigger, number) => {
 
   try {
     const saveMessage = await newMessage.save();
-    console.log("Mensaje mongo guardado", saveMessage);
+    //console.log("Mensaje mongo guardado", saveMessage);
   } catch (error) {
     console.log(error);
   }
