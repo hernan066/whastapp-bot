@@ -11,7 +11,9 @@ const {
   responsePut,
 } = require("../controllers/flowDb");
 
-// /api
+// /api/flow
+
+/* -------flow-------- */
 //mostrar
 router.get("/initial", initialGet);
 router.get("/response", responseGet);

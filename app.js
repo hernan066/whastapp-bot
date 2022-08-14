@@ -30,7 +30,7 @@ const {
   readChat,
 } = require("./controllers/send");
 
-const messagesRouter = require('./routes/messaje');
+
 
 
 const app = express();
@@ -46,7 +46,9 @@ var client;
 
 //Rutas
 app.use("/", require("./routes/web"));
-app.use('/api', messagesRouter)
+app.use('/api/flow', require("./routes/flowDb"))
+app.use('/api/message', require("./routes/message"))
+//app.use('/api/user', require("./routes/user"))
 
 //Escuchamos cuando entre un mensaje
 const listenMessage = () =>
