@@ -28,6 +28,7 @@ const {
   sendMessage,
   lastTrigger,
   readChat,
+  sendMessageButton,
 } = require("./controllers/send");
 
 
@@ -109,6 +110,12 @@ const listenMessage = () =>
       const response = await responseMessages(step);
 
       await sendMessage(client, from, response.replyMessage, response.trigger);
+
+      if(response.hasOwnProperty('actions')){
+        const { actions } = response;
+        await sendMessageButton(client, from, null, actions);
+        return
+    }
 
       if (!response.delay && response.media) {
         sendMedia(client, from, response.media);

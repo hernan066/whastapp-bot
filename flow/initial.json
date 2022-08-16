@@ -1,6 +1,6 @@
 [
     {
-        "keywords":  [
+        "keywords": [
             "hola",
             "hola!",
             "ola",
@@ -18,38 +18,41 @@
         "key": "STEP_1"
     },
     {
-        "keywords":  [
-            "cursos",
-            "info",
-            "curso"        ],
-        "key": "STEP_2"
-    },
-    {
-        "keywords":  [
-            "angular"
+        "keywords": [
+            "1",
+            "Si, quiero agregar otra"
         ],
-        "key": "STEP_2_1"
+        "key": "PEDIDO_1"
     },
     {
-        "keywords":  [
+        "keywords": [
+            "oferta 1",
+            "oferta 2",
+            "oferta 3"
+
+        ],
+        "key": "PEDIDO_2_OTRO"
+    },
+    {
+        "keywords": [
             "node"
         ],
         "key": "STEP_2_2"
     },
     {
-        "keywords":  [
+        "keywords": [
             "ngrx"
         ],
         "key": "STEP_2_3"
     },
     {
-        "keywords":  [
+        "keywords": [
             "aws"
         ],
         "key": "STEP_2_4"
     },
     {
-        "keywords":  [
+        "keywords": [
             "asesor",
             "asesores",
             "Vendedor",
@@ -58,7 +61,7 @@
         "key": "STEP_3"
     },
     {
-        "keywords":  [
+        "keywords": [
             "muchas gracias",
             "ok",
             "gracias",
@@ -67,25 +70,25 @@
         "key": "STEP_4"
     },
     {
-        "keywords":  [
+        "keywords": [
             "youtube"
         ],
         "key": "STEP_5"
     },
     {
-        "keywords":  [
+        "keywords": [
             "VER_CURSOS"
         ],
         "key": "STEP_6"
     },
     {
-        "keywords":  [
+        "keywords": [
             "telegram"
         ],
         "key": "STEP_7"
     },
     {
-        "keywords":  [
+        "keywords": [
             "audio"
         ],
         "key": "STEP_8"
