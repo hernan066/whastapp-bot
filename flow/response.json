@@ -1,149 +1,148 @@
 {
-    "DEFAULT": {
-        "replyMessage": [
-            "Hola! Bienvenido a *Distribuidora Ringo*. \n",
-            "Este es un sistema automático de pedidos. \n",
-            "Hacemos envíos a las siguientes zonas ⬆️⬆️⬆️. \n \n",
-            " Presiona el numero correspondiente de cada menú: \n",
-            "*1.* Realizar pedido. \n",
-            "*2.* Consultar zonas de envió. \n",
-            "*3.* Ubicación de nuestro local.  \n",
-            "*4.* Consultar ofertas. \n",
-            "*5.* Salir."
-        ],
-        "media": null,
-        "trigger": null
-    },
-    "PEDIDO_1": {
-        "replyMessage": [
-            null
-        ],
-        "media": null,
-        "trigger": null,
-        "actions": {
-            "title": "¿Que oferta quieres encargar?",
-            "message": "Tenemos las siguientes ofertas:  \n\n *Oferta 1*: 10kg de Pata/ Muslo  $3000   \n *Oferta 2*:  5kg de Suprema a $3600  \n *Oferta 3*: Cajon de pollos $6000 ",
-            "footer": "Recuerda consultar primero si hacemos envios a la zona donde vives, puedes volver escribiendo *menu*",
-            "buttons": [
-                {
-                    "body": "Oferta 1"
-                },
-                {
-                    "body": "Oferta 2"
-                },
-                {
-                    "body": "Oferta 3"
-                }
-            ]
+  "DEFAULT": {
+    "replyMessage": [
+      "Hola! Bienvenido a *Distribuidora Ringo*. \n",
+      "Este es un sistema automático de pedidos. \n",
+      "Hacemos envíos a las siguientes zonas ⬆️⬆️⬆️. \n \n",
+      " Presiona el numero correspondiente de cada menú: \n",
+      "*1.* Realizar pedido. \n",
+      "*2.* Consultar zonas de envió. \n",
+      "*3.* Ubicación de nuestro local.  \n",
+      "*4.* Consultar ofertas. \n",
+      "*5.* Pedidos especiales. \n",
+      "*6.* Salir."
+    ],
+    "media": "https://i.ibb.co/V2FS9J5/Whats-App-Image-2022-08-04-at-2-39-34-AM.jpg",
+    "trigger": null
+  },
+  "PEDIDO_1": {
+    "replyMessage": [null],
+    "media": null,
+    "trigger": null,
+    "actions": {
+      "title": "¿Que oferta quieres encargar?",
+      "message": "Tenemos las siguientes ofertas:  \n\n *Oferta 1*: 10kg de Pata/ Muslo  $3000   \n *Oferta 2*:  5kg de Suprema a $3600  \n *Oferta 3*: Cajon de pollos $6000 ",
+      "footer": "Recuerda consultar primero si hacemos envíos a la zona donde vives, puedes volver escribiendo *menu*",
+      "buttons": [
+        {
+          "body": "Oferta 1"
+        },
+        {
+          "body": "Oferta 2"
+        },
+        {
+          "body": "Oferta 3"
         }
-    },
-    "PEDIDO_2_OTRO": {
-        "replyMessage": [null],
-        "media": null,
-        "trigger": null,
-        "actions": {
-            "title": "¿Que agregar otra oferta?",
-            "message": "Puedes agragar una distinta, o la misma",
-            "footer":null,
-            "buttons": [
-                {
-                    "body": "Si, quiero agregar otra"
-                },
-                {
-                    "body": "No, gracias"
-                }                
-            ]
-        }
-    },
-    "STEP_2_1": {
-        "replyMessage": [
-            "Si te interesa Angular tienes disponible \n",
-            "*(Gratis)* https://bit.ly/367tJ32 \n\n",
-            "*(Pago)* https://link.codigoencasa.com/PROMO-INICIAL \n\n",
-            "*(Pago)* https://link.codigoencasa.com/ANGULAR-BASICO-EDTEAM \n\n",
-            "😎😎😎"
-        ],
-        "media": "https://i.imgur.com/Q0a5UQI.jpg",
-        "trigger": null
-    },
-    "STEP_2_2": {
-        "replyMessage": [
-            "Si te interesa NODE tienes disponible \n",
-            "*(Gratis)* https://bit.ly/3od1Bl6 \n\n",
-            "Espero pronto tener más material disponible",
-            "🤖"
-        ],
-        "media": null,
-        "trigger": null
-    },
-    "STEP_2_3": {
-        "replyMessage": [
-            "NGRX para manejar estados en Angular \n",
-            "*(Gratis)* https://bit.ly/ngrx-desde-cero \n",
-            "A darle! 😮"
-        ],
-        "media": null,
-        "trigger": null
-    },
-    "STEP_2_4": {
-        "replyMessage": [
-            "Muy bien AWS esta pronto a salir pre-registrate aquí \n",
-            "*(Pre-registro)* https://link.codigoencasa.com/AWS-BASICO-INVITACION \n",
-            "😮😮"
-        ],
-        "media": null,
-        "trigger": null
-    },
-    "STEP_3": {
-        "replyMessage": [
-            "¿Ok cual curso de intereso? \n",
-            "*angular* , *node*, *ngrx*, *aws*"
-        ],
-        "media": null,
-        "trigger": null
-    },
-    "STEP_4": {
-        "replyMessage": [
-            "Gracias a usted! \n"
-        ],
-        "media": "https://media.giphy.com/media/14qJh3JUmlxW0g/giphy.gif",
-        "trigger": null
-    },
-    "STEP_5": {
-        "replyMessage": [
-            "Muy bien te comparto el canal de Youtube \n",
-            "https://youtube.com/leifermendez \n"
-        ],
-        "media": null,
-        "trigger": null
-    },
-    "STEP_6": {
-        "replyMessage": [
-            "Perfecto, te voy a pasar la lista ",
-            "de los temas que tengo y un breve video 🙂🤖 \n\n",
-            "*Angular* Basico (Pago) \n",
-            "*Angular* Basico (Gratis) \n",
-            "*Node* Basico (Gratis) \n",
-            "*NGRX* Basico (Gratis) \n",
-            "*AWS* Basico (Pago) \n\n",
-            "Escribe la palabra del tema que te interese \n"
-        ],
-        "media": "https://i.giphy.com/media/5J5gN0WUk0VToHaK2p/giphy-downsized.gif",
-        "trigger": null
-    },
-    "STEP_7": {
-        "replyMessage": [
-            "Vente al telegram \n",
-            "https://t.me/leifermendez \n"
-        ],
-        "media": null,
-        "trigger": null
-    },
-    "STEP_8": {
-        "replyMessage": [
-            "Esto es una nota de voz \n"
-        ],
-        "media": "nota-de-voz.mp3",
-        "trigger": null
+      ]
     }
+  },
+  "PEDIDO_2_OTRO": {
+    "replyMessage": [null],
+    "media": null,
+    "trigger": null,
+    "actions": {
+      "title": "¿Quieres agregar otra oferta?",
+      "message": "Puedes agragar una distinta, o la misma",
+      "footer": null,
+      "buttons": [
+        {
+          "body": "Si, quiero agregar otra"
+        },
+        {
+          "body": "No, gracias"
+        }
+      ]
+    }
+  },
+  "PEDIDO_3_NOMBRE": {
+    "replyMessage": ["Ingresa tu nombre"],
+    "media": null,
+    "trigger": null
+  },
+  "PEDIDO_4_DIRECCION": {
+    "replyMessage": ["Ingresa la dirección de envio"],
+    "media": null,
+    "trigger": null
+  },
+  "PEDIDO_5_CONFIRMA": {
+    "replyMessage": [null],
+    "media": null,
+    "trigger": null,
+    "actions": {
+      "title": null,
+      "message": "¿Todos los datos son correctos?",
+      "footer": "Presiona *si* para confirmar, y *no* para cancelar",
+      "buttons": [
+        {
+          "body": "Si, son correctos"
+        },
+        {
+          "body": "No, hay un error"
+        }
+      ]
+    }
+  },
+  "PEDIDO_5_CONFIRMA_SI": {
+    "replyMessage": [
+      "Muchas gracias por su compra, su pedido será enviado en las próximas 24hs. \n",
+      "Recuerda que el horario de reparto es de 8hs a 12hs, de lunes a sábado."
+    ],
+    "media": null,
+    "trigger": null
+  },
+  "ENVIO_2": {
+    "replyMessage": [
+      "*2. Envios* 🚚: Realizamos envíos a domicilio a las siguientes zonas \n",
+      "De 8 a 12 hs⏰"
+    ],
+    "media": "https://i.ibb.co/V2FS9J5/Whats-App-Image-2022-08-04-at-2-39-34-AM.jpg",
+    "trigger": null
+  },
+  "UBICACION_3": {
+    "replyMessage": ["*3.Ubicación:* Estamos en San Miguel 🏠, en la calle xxx"],
+    "media": null,
+    "trigger": null
+  },
+  "OFERTAS_4": {
+    "replyMessage": [
+      "*4. Ofertas:* Tenemos las siguientes ofertas ⬆️⬆️⬆️ \n",
+      "Solo estas pueden comprarse de manera automatica. \n",
+      "Si desea encargar otras cantidades(kg) de productos, \n",
+      "ingresa la opción *5* ➡️ Pedidos especiales"
+    ],
+    "media": null,
+    "trigger": null
+  },
+  "ESPECIALES_5": {
+    "replyMessage": [
+      "*5. Pedidos especiales:* Si quiere encargar más cantidad de algún tipo de nuestros productos, envié su pedido a el siguiente numero y será atendido por uno de nuestros operadores\n",
+      "https://api.whatsapp.com/send?phone=+543413436676&text=Me%20gastar%C3%ADa%20realizar%20un%20pedido%20especial"
+    ],
+    "media": null,
+    "trigger": null
+  },
+  "SALIR_6": {
+    "replyMessage": [
+      "Muchas gracias por escribirnos, puedes seguirnos en Facebook, donde publicamos todas nuestras ofertas\n",
+      "https://www.facebook.com/DistribuidoraRingo"
+    ],
+    "media": null,
+    "trigger": null
+  },
+  "MENU": {
+    "replyMessage": [
+      "Hola! Bienvenido a *Distribuidora Ringo*. \n",
+      "Este es un sistema automático de pedidos. \n \n",
+      
+      " Presiona el numero correspondiente de cada menú: \n",
+      "*1.* Realizar pedido. \n",
+      "*2.* Consultar zonas de envió. \n",
+      "*3.* Ubicación de nuestro local.  \n",
+      "*4.* Consultar ofertas. \n",
+      "*5.* Pedidos especiales. \n",
+      "*6.* Salir."
+    ],
+    "media": null,
+    "trigger": null
+  }
 }

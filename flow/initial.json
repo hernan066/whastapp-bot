@@ -1,96 +1,42 @@
 [
-    {
-        "keywords": [
-            "hola",
-            "hola!",
-            "ola",
-            "ole",
-            "inicio",
-            "welcome",
-            "buenos días",
-            "buenas tardes",
-            "buenas noches",
-            "me dieron este número",
-            "venden a crédito",
-            "quisiera saber si venden",
-            "necesito saber"
-        ],
-        "key": "STEP_1"
-    },
-    {
-        "keywords": [
-            "1",
-            "Si, quiero agregar otra"
-        ],
-        "key": "PEDIDO_1"
-    },
-    {
-        "keywords": [
-            "oferta 1",
-            "oferta 2",
-            "oferta 3"
-
-        ],
-        "key": "PEDIDO_2_OTRO"
-    },
-    {
-        "keywords": [
-            "node"
-        ],
-        "key": "STEP_2_2"
-    },
-    {
-        "keywords": [
-            "ngrx"
-        ],
-        "key": "STEP_2_3"
-    },
-    {
-        "keywords": [
-            "aws"
-        ],
-        "key": "STEP_2_4"
-    },
-    {
-        "keywords": [
-            "asesor",
-            "asesores",
-            "Vendedor",
-            "cobrador"
-        ],
-        "key": "STEP_3"
-    },
-    {
-        "keywords": [
-            "muchas gracias",
-            "ok",
-            "gracias",
-            "vale gracias"
-        ],
-        "key": "STEP_4"
-    },
-    {
-        "keywords": [
-            "youtube"
-        ],
-        "key": "STEP_5"
-    },
-    {
-        "keywords": [
-            "VER_CURSOS"
-        ],
-        "key": "STEP_6"
-    },
-    {
-        "keywords": [
-            "telegram"
-        ],
-        "key": "STEP_7"
-    },
-    {
-        "keywords": [
-            "audio"
-        ],
-        "key": "STEP_8"
-    }
+  {
+    "keywords": ["menu", "Menu", "Menú, menú"],
+    "key": "MENU"
+  },
+  {
+    "keywords": ["1", 1, "uno", "Uno"],
+    "key": "PEDIDO_1"
+  },
+  {
+    "keywords": ["2", 2, "dos", "Dos"],
+    "key": "ENVIO_2"
+  },
+  {
+    "keywords": ["3", 3, "tres", "Tres"],
+    "key": "UBICACION_3"
+  },
+  {
+    "keywords": ["4", 4, "cuatro", "Cuatro"],
+    "key": "OFERTAS_4"
+  },
+  {
+    "keywords": ["5", 5, "cinco", "Cinco"],
+    "key": "ESPECIALES_5"
+  },
+  {
+    "keywords": ["6", 6, "seis", "Seis", "Salir", "salir"],
+    "key": "SALIR_6"
+  },
+  {
+    "keywords": ["oferta 1\n10kg de pata-muslo"],
+    "key": "OFERTA_1"
+  },
+  {
+    "keywords": ["oferta 2\n5kg de supremas"],
+    "key": "OFERTA_2"
+  },
+  {
+    "keywords": ["oferta 3\n1 cajon de pollos"],
+    "key": "OFERTA_3"
+  }
 ]
