@@ -117,7 +117,9 @@ const saveMessage = (message, trigger, number) =>
       case "dialogflow":
         if(message.includes("Datos del pedido: -")){
             await saveOrder(number, message)
-          }
+          } 
+          
+          //console.log("Este es el mensaje>>>>>>>>>>>>>>>>>",message)
       
       resolve(await saveMessageMongo(message, trigger, number));
         break;

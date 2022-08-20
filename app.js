@@ -29,6 +29,7 @@ const {
   lastTrigger,
   readChat,
   sendMessageButton,
+  sendMessageList,
 } = require("./controllers/send");
 const { initializeOrder, saveOrder } = require("./controllers/order");
 
@@ -82,7 +83,7 @@ const listenMessage = () =>
       const response = await bothResponse(message);
 
       //console.log(response);
-      await sendMessage(client, from, response.replyMessage);
+      await sendMessage(client, from, response.replyMessage, "entrada");
       
       if(body.includes("Datos del pedido: -")){
         await saveOrder(from, body)
@@ -116,7 +117,7 @@ const listenMessage = () =>
           ],
           "Selecciona una oferta"
         );
-        await sendMessage(client, from, productsList, null);
+        await sendMessageList(client, from, productsList, null);
 
       return;
       }

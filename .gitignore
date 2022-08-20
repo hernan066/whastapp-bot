@@ -10,5 +10,4 @@ mediaSend/*
 !mediaSend/nota-de-voz.mp3
 .env
 .wwebjs_auth
-chatbot-account-copy.json
 chatbot-account.json

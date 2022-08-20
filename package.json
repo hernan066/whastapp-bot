@@ -19,6 +19,7 @@
     "file-type": "^16.5.3",
     "mime-db": "^1.51.0",
     "moment": "^2.29.2",
+    "moment-timezone": "^0.5.34",
     "mongoose": "^6.5.0",
     "mysql": "^2.18.1",
     "nanoid": "^3.3.2",
