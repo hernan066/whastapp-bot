@@ -11,3 +11,4 @@ mediaSend/*
 .env
 .wwebjs_auth
 chatbot-account-copy.json
+chatbot-account.json
