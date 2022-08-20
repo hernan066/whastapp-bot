@@ -55,7 +55,7 @@
     }
   },
   "PEDIDO_3_NOMBRE": {
-    "replyMessage": ["Ingresa tu nombre"],
+    "replyMessage": ["Ingresa tu nombre, y la direcion de envio"],
     "media": null,
     "trigger": null
   },

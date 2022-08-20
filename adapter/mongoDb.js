@@ -54,7 +54,7 @@ const saveMessageMongo = async (message, trigger, number) => {
 
   try {
     const saveMessage = await newMessage.save();
-    //console.log("Mensaje mongo guardado", saveMessage);
+    console.log("Mensaje mongo guardado", saveMessage);
   } catch (error) {
     console.log(error);
   }

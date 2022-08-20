@@ -4,7 +4,7 @@
     "key": "MENU"
   },
   {
-    "keywords": ["1", 1, "uno", "Uno"],
+    "keywords": ["1", 1, "uno", "Uno", "Si, quiero agregar otra", "si, quiero agregar otra"],
     "key": "PEDIDO_1"
   },
   {
@@ -28,8 +28,8 @@
     "key": "SALIR_6"
   },
   {
-    "keywords": ["oferta 1\n10kg de pata-muslo"],
-    "key": "OFERTA_1"
+    "keywords": ["Oferta 1\n10kg de pata-muslo", "oferta 1\n10kg de pata-muslo"],
+    "key": "PEDIDO_2_OTRO"
   },
   {
     "keywords": ["oferta 2\n5kg de supremas"],
@@ -38,5 +38,9 @@
   {
     "keywords": ["oferta 3\n1 cajon de pollos"],
     "key": "OFERTA_3"
+  },
+  {
+    "keywords": ["No, gracias", "no, gracias" ],
+    "key": "PEDIDO_3_NOMBRE"
   }
 ]

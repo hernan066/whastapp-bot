@@ -43,7 +43,7 @@ const sendMedia = (client, number, fileName) => {
  * Enviamos un mensaje simple (texto) a nuestro cliente
  * @param {*} number 
  */
-const sendMessage = async (client, number = null, text = null, trigger = null) => {
+const sendMessage = async (client, number = null, text = null, trigger = "salida") => {
    setTimeout(async () => {
     number = cleanNumber(number)
     const message = text

@@ -30,7 +30,7 @@ const {
   readChat,
   sendMessageButton,
 } = require("./controllers/send");
-const { initializeOrder } = require("./controllers/order");
+const { initializeOrder, saveOrder } = require("./controllers/order");
 
 const app = express();
 app.use(cors());
@@ -83,9 +83,50 @@ const listenMessage = () =>
 
       //console.log(response);
       await sendMessage(client, from, response.replyMessage);
+      
+      if(body.includes("Datos del pedido: -")){
+        await saveOrder(from, body)
+      }
+      
+      if (message === "1") {
+        const productsList = new List(
+          "Esta es una lista con nuestras ofertas",
+          "Ver todas las ofertas",
+          [
+            {
+              title: "Lista de ofertas",
+              rows: [
+                {
+                  id: "oferta1",
+                  title: "Oferta 1",
+                 description: "10kg de pata-muslo", 
+                },
+                {
+                  id: "oferta2",
+                  title: "Oferta 2",
+                  description: "5kg de supremas",
+                },
+                {
+                  id: "oferta3",
+                  title: "Oferta 3",
+                  description: "1 cajon de pollos",
+                },
+              ],
+            },
+          ],
+          "Selecciona una oferta"
+        );
+        await sendMessage(client, from, productsList, null);
+
+      return;
+      }
+
+      
+      
+      
       if (response.media) {
         sendMedia(client, from, response.media);
-      }
+      } 
       return;
     }
 
@@ -103,7 +144,6 @@ const listenMessage = () =>
 
     //Respondemos al primero paso si encuentra palabras clave
     const step = await getMessages(message);
-    console.log("=================", step);
 
     if (step === "PEDIDO_1") {
       const productsList = new List(
@@ -123,27 +163,23 @@ const listenMessage = () =>
                 title: "Oferta 2",
                 description: "5kg de supremas",
               },
-              { id: "oferta3", 
-              title: "Oferta 3", 
-              description: "1 cajon de pollos",
-            },
+              {
+                id: "oferta3",
+                title: "Oferta 3",
+                description: "1 cajon de pollos",
+              },
             ],
           },
         ],
         "Selecciona una oferta"
       );
-      //client.sendMessage(myGroup.id._serialized, productsList);
-      await sendMessage(client, from, productsList, null);
 
-      // Quieres agregar otra oferta?
+      await sendMessage(client, from, productsList, null);
 
       return;
     }
-    
-    
-    
-    
-    if(step === "OFERTA_1" || step === "OFERTA_2" || step === "OFERTA_3"){
+
+    if (step === "OFERTA_1" || step === "OFERTA_2" || step === "OFERTA_3") {
       return;
     }
 
@@ -215,7 +251,7 @@ client.initialize();
 if (process.env.DATABASE === "mysql") {
   mysqlConnection.connect();
 }
-if (process.env.DATABASE === "mongoDb") {
+if (process.env.DATABASE === "dialogflow") {
   dbConnectionMongo();
 }
 
